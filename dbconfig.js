@@ -5,16 +5,10 @@
 
 
 export const config = {
-    host :ep-crimson-mouse-acni3gvs-pooler.sa-east-1.aws.neon.tech,
-    database:neondb,
-    user:neondb_owner,
-    password:npg_LIX0pGM5nKTu,
-    port:3000,
+    host :process.env.PGHOST,
+    database:process.env.PGDATABASE,
+    user:process.env.PGUSER,
+    password:process.env.PGPASSWORD,
+    port:5432,
     ssl: true
 }
-PGHOST='ep-crimson-mouse-acni3gvs-pooler.sa-east-1.aws.neon.tech'
-PGDATABASE='neondb'
-PGUSER='neondb_owner'
-PGPASSWORD='npg_LIX0pGM5nKTu'
-PGSSLMODE='require'
-PGCHANNELBINDING='require'
