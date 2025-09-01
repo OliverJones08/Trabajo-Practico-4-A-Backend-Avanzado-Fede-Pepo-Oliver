@@ -22,7 +22,7 @@ app.get('/about', (req, res) => {
 app.get('/canciones', async (req, res) => {
   const client = new Client(config);
   await client.connect();
-  let result = await client.query("select * from public.canciones");
+  let result = await client.query("select * from public.cancion");
   await client.end();
   console.log(result.rows);
   res.send(result.rows)
