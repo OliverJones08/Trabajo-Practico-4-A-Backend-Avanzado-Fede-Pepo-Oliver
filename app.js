@@ -19,10 +19,10 @@ app.get('/about', (req, res) => {
   res.send('About route 🎉 ')
 })
 
-app.get('/canciones', async (req, res) => {
+app.get('/Cancion', async (req, res) => {
   const client = new Client(config);
   await client.connect();
-  let result = await client.query("select * from public.cancion");
+  let result = await client.query("select * from public.Cancion");
   await client.end();
   console.log(result.rows);
   res.send(result.rows)
